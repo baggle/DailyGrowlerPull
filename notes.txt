@@ -1,0 +1,38 @@
+Here is the idea for TDG analysis. Take the webpage and extract all the data for it and do analysis:
+
+tearing down TDG listings:
+
+Look at source for beer listing page. It's built on Word Press, hosted on Amazon, and written in HTML and Javascript (the latter 2 probably written by WP plugins)
+
+3rd instance of the text 'table' is where the listing table starts
+could probably take the whole text to the </table> into a csv
+
+this:
+<th class=' '  style="width:40px;text-align:left" >TAP</th>
+<th class=' '  style="width:150px;text-align:left" >BREWERY</th>
+<th class=' '  style="width:300px;text-align:left" >BEER</th>
+<th class=' '  style="width:75px;text-align:left" >STYLE</th>
+<th class=' '  style="width:25px;text-align:center" >STATE</th>
+<th class=' '  style="width:75px;text-align:center" >ABV</th>
+<th class=' '  style="width:50px;text-align:center" >GROWLER</th>
+<th class=' '  style="width:25px;text-align:center" >PINT</th>
+<th class=' ' >5oz</th>
+becomes:
+TAP,BREWERY,BEER,STYLE,STATE,AVB,GROWLER,PINT,5oz
+
+each <tr> is its own line
+ex, this:
+<tr><td  style="text-align:left" >1</td>
+<td  style="text-align:left" ><a href='http://www.thirstydog.com'>Thirsty Dog</a></td>
+<td  style="text-align:left" ><a href='/thirsty-dog-bernese-barleywine/'>Bernese Barley Wine</a></td>
+<td  style="text-align:left" >Barley Wine</td>
+<td  style="text-align:center" >OH</td>
+<td  style="text-align:center" >10.50%</td>
+<td  style="text-align:center" >$18.00</td>
+<td  style="text-align:center" >$9.00</td>
+<td >$3.60</td>
+</tr>
+becomes:
+1,Thirsty Dog,Bernese Barley Wine,Barley Wine,OH,10.50%,$18.00,$9.00,$3.60
+
+probably key in on the <tr>*</tr> tags

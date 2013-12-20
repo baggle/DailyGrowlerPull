@@ -1,0 +1,9 @@
+<th class=' '  style="width:40px;text-align:left" >TAP</th>
+<th class=' '  style="width:150px;text-align:left" >BREWERY</th>
+<th class=' '  style="width:300px;text-align:left" >BEER</th>
+<th class=' '  style="width:75px;text-align:left" >STYLE</th>
+<th class=' '  style="width:25px;text-align:center" >STATE</th>
+<th class=' '  style="width:75px;text-align:center" >ABV</th>
+<th class=' '  style="width:50px;text-align:center" >GROWLER</th>
+<th class=' '  style="width:25px;text-align:center" >PINT</th>
+<th class=' ' >5oz</th>
